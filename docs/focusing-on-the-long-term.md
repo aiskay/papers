@@ -86,7 +86,7 @@ Google 検索広告の実験では、user learning による term 1, 2 への統
 
 ### 3.1.2 Post-Period Learning Measurements (PP)
 
-![df0f3b83d8104515dd044353ffea2d81.png](df0f3b83d8104515dd044353ffea2d81.png)
+![figure 1](../figs/focusing-on-the-long-term/fig1.png)
 
 前の実験における carryover effect を利用し、**A/B テスト後の A/A テスト (post-period) における変化を測定することで user learning を定量化する**方法。
 以下の点に注意が必要である。
@@ -120,7 +120,7 @@ PP method の問題点は**unlearning の効果が treatment period の後に測
 
 Best parctice としては **全ての方法を組み合わせて (つまり CCD setup を行った後 PP measurement を行う) $\tilde{U}_{CTR}^{PP}, \tilde{U}_{CTR}^{LS}, \tilde{U}_{CTR}^{CCD}$ が consistent になるかを比較すること**である。
 
-![4c26f8fb7639c5daf48636cece524019.png](4c26f8fb7639c5daf48636cece524019.png)
+![figure 2](../figs/focusing-on-the-long-term/fig2.png)
 
 ### 3.2 Ads Blindness Studies
 
@@ -132,7 +132,7 @@ Best parctice としては **全ての方法を組み合わせて (つまり CCD
 (ただし、CCD method を開発する前に行われた実験のため PP and lagged-start methods で比較されている)
 介入はシンプルに「広告の掲載数を増やす/減らす」というものである。
 
-![1218d59e26a7978a6d8f6c267c29b6d0.png](1218d59e26a7978a6d8f6c267c29b6d0.png)
+![figure 3](../figs/focusing-on-the-long-term/fig3.png)
 
 本結果を以下のモデルで近似する。
 
@@ -206,7 +206,7 @@ $$
 ここでは、説明性と当てはまりの観点からあえてシンプルな線形モデルを用いている。
 数式を見てわかる通り、**広告の潜在的な click 傾向が広告の関連度だけでなく広告の landing page の質にも大きく依存**しており、これらの要因を考慮することで (UI 変更以外の) 変更をかなりよく近似できることがわかる。
 
-![3a553d3b0d703b47da2db7a1f767f3fe.png](3a553d3b0d703b47da2db7a1f767f3fe.png)
+![figure 4](../figs/focusing-on-the-long-term/fig4.png)
 
 ### 4.4 Long-term Impact and OECs
 
@@ -230,8 +230,8 @@ $$
 1. ranking function の変更: landing page quality により重きを置く ranking function の変更が行われた。
 2. Mobile ad load: mobile device で同様の実験を行ったところ、長期では負の影響が見られた。さらにその他の追試を行い、最終的に mobile device で 50% の広告削減を行った。
 
-![612dda7479b5aadae885fc808b7580de.png](612dda7479b5aadae885fc808b7580de.png)
-![e8dd9b0570addce61916c564eea42e95.png](e8dd9b0570addce61916c564eea42e95.png)
+![figure 5](../figs/focusing-on-the-long-term/fig5.png)
+![figure 6](../figs/focusing-on-the-long-term/fig6.png)
 
 ## 6. Conclusions & Future Work
 

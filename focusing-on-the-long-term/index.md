@@ -1,5 +1,42 @@
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['\$','\$'],['\\(','\\)']],processEscapes:true},CommonHTML: {matchFontHeight:false}});</script>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true,
+        tags: "ams",
+        autoload: {
+          color: [],
+          colorV2: ['color']
+        },
+        packages: {'[+]': ['noerrors']}
+      },
+      chtml: {
+        matchFontHeight: false,
+        displayAlign: "left",
+        displayIndent: "2em"
+      },
+      options: {
+        renderActions: {
+          /* add a new named action to render <script type="math/tex"> */
+          find_script_mathtex: [10, function (doc) {
+            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            }
+          }, '']
+        }
+      },
+      loader: {
+        load: ['[tex]/noerrors']
+      }
+    };
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script"></script>
 
 # Focusing on the Long-term: It’s Good for Users and Business
 
@@ -150,10 +187,10 @@ where $\alpha$ estimates the magnitude of learning at the beginning of the post-
 $$
 \tilde{U}_{CTR}^{CCD} (t) = \alpha' \cdot (1 - e^{-\beta (t-T)}), \quad (t \geq 0)
 $$
+
 with $\alpha'$ estimating the magnitude of learning we would measure in a very long study ($t \rightarrow \infty$).
 
 なお、検索回数などでモデリングも行ったが、時刻の関数としたモデリングが最も当てはまりが良かった。
-
 以後、簡単のため $\tilde{U}_{CTR}$ は 3 ヶ月の (各) 実験で得られた測定値とする。
 
 #### 3.2.2 The Dropping Study

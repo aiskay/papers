@@ -28,7 +28,7 @@ A/B テスト期間における指標の変化という短期的な効果では�
 
 ## 2. Background & Related Work
 
-これまで、Google や Google 検索広告では常に *ads quality** を優先してきており (短期的指標を追い求めてしまうと長期的にはユーザが広告を無視するようになったり果てには Google を使うのをやめてしまう可能性が高いため)、bid と *algorithmically-determined* quality signals の組み合わせで auction ranking を行っている。(その結果、ほとんどの query で広告を掲載していない)
+これまで、Google や Google 検索広告では常に *ads quality* を優先してきており (短期的指標を追い求めてしまうと長期的にはユーザが広告を無視するようになったり果てには Google を使うのをやめてしまう可能性が高いため)、bid と *algorithmically-determined* quality signals の組み合わせで auction ranking を行っている。(その結果、ほとんどの query で広告を掲載していない)
 
 #### Experimental unit
 

@@ -252,8 +252,4 @@ Future work
 - create *nano-model* that aim to predict the blindness cost of individual ad impressions, i.e., the future revenue loss (or gain) caused by showing an ad to the user
 
 
-[^1]: 適当な segment について足し合わせれば、
-$$
-U_{RPM} \simeq Q \cdot \sum_i w_i \tilde{U}_{CTR, i},
-$$
-と表すこともできる。
+[^1]: 適当な segment $i$ について足し合わせれば、 $U_{RPM} \simeq Q \cdot \sum_i w_i \tilde{U}_{CTR, i}$ と表すこともできる。

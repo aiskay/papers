@@ -1,5 +1,3 @@
-<script   async   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"   id="MathJax-script"></script>
-
 # Focusing on the Long-term: It’s Good for Users and Business
 
 ## Abstract

@@ -94,7 +94,7 @@ Google 検索広告の実験では、user learning による term 1, 2 への統
 前の実験における carryover effect を利用し、**A/B テスト後の A/A テスト (post-period) における変化を測定することで user learning を定量化する**方法。
 以下の点に注意が必要である。
 
-- **Ensuring valid measurements**
+- **Ensuring valid measurements**  
 長期の介入や個別最適化によって experiment と control の分布が変化する可能性がある。そのため、介入に影響されない数値 (ads per query や average predicted ad CTR など) が両群で大きく違わないかを確認する必要がある。
 - **Unlearning**
 Unlearning をより正確に測定するために post-period を長く取れば取るほど測定バイアスが大きくなる (測定バイアスについては Sec. 3.2.1 で)

@@ -121,7 +121,7 @@ PP method の問題点は**unlearning の効果が treatment period の後に測
 
 一方、実験のためのインフラ整備が大変なのがデメリットである。
 
-Best parctice としては **全ての方法を組み合わせて (つまり CCD setup を行った後 PP measurement を行う)** $\tilde{U}_{CTR}^{PP}, \tilde{U}_{CTR}^{LS}, \tilde{U}_{CTR}^{CCD}$ **が consistent になるかを比較すること**である。
+Best parctice としては **全ての方法を組み合わせて (つまり CCD setup を行った後 PP measurement を行う) $\tilde{U} _{CTR}^{PP}, \tilde{U} _{CTR}^{LS}, \tilde{U} _{CTR}^{CCD}$ が consistent になるかを比較すること**である。
 
 ![figure 2](figs/fig2.png)
 
@@ -165,7 +165,7 @@ with $\alpha'$ estimating the magnitude of learning we would measure in a very l
 - $e_1, \cdots, e_n$: the same ad load as $c$ but different ads quality. (We  first increase the ad load and then reduce it back to the level of $c$ by dropping ads from a specific quality tier $i = 1, \cdots ,n$.  The ads quality of $e_i$ decreases as $i$ increases.)
 - $e'$: Same as for $e_i$ , in that we increase the ad load to the same level as e,  but we then drop ads uniformly across all quality tiers to achieve the same ad load as c but with an average ads quality comparable to e.
 
-その結果、ad quality は $\tilde{U}_{CTR}^{PP}$ に影響を与えた一方、$\tilde{U}_{CTR}(E, E')$ には有意な変化が見られなかったため、ads quality が user learning の主要な要因であることがわかった。
+その結果、ad quality は $\tilde{U} _{CTR}^{PP}$ に影響を与えた一方、$\tilde{U} _{CTR}(E, E')$ には有意な変化が見られなかったため、ads quality が user learning の主要な要因であることがわかった。
 
 #### 3.2.3 Subsequent Experiments
 

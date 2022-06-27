@@ -96,13 +96,13 @@ Google 検索広告の実験では、user learning による term 1, 2 への統
 
 - **Ensuring valid measurements**  
 長期の介入や個別最適化によって experiment と control の分布が変化する可能性がある。そのため、介入に影響されない数値 (ads per query や average predicted ad CTR など) が両群で大きく違わないかを確認する必要がある。
-- **Unlearning**
+- **Unlearning**  
 Unlearning をより正確に測定するために post-period を長く取れば取るほど測定バイアスが大きくなる (測定バイアスについては Sec. 3.2.1 で)
-- **Cookie churn**
+- **Cookie churn**  
 ユーザが cookie のリセットや削除を行うと、新たなユーザとしてランダムに割り振られるため learning effect が dilute される。これを避けるには実験前に存在した cookie に限るとよい。(しかしそれはそれで bias を生む可能性がある)
-- **Experiment sizing**
+- **Experiment sizing**  
 unlearning の効果と cookie の生存率を加味して適切な cookie 数を事前に用意する必要がある。
-- **Intermediate measurements and lagged-starts**
+- **Intermediate measurements and lagged-starts**  
 PP method の問題点は**unlearning の効果が treatment period の後に測定されること**である。つまり、treatment period をどのくらいの期間取れば効果を定量的に測れるのかがやってみるまでわからない。
 解決策の一つは、lagged-start cohort $E_1$ を導入することである。$E$ が介入を受けている当初 $E_1$ は control treatment $c$ を受けるが、ある時刻 $T_1$ で介入施策 $e$ を受け、その段階での相対 CTR $\tilde{U}_{CTR}^{LS} = \Delta CTR (E, E_1, T_1)$ を測定する方法である。これにより、短期の影響を除いた形で効果を検証できる。
 
@@ -180,9 +180,9 @@ Initial experiments に引き続き 8 年以上かけて何百もの実験を繰
 
 先にも述べたように、本実験で測られた learning effect は過小評価されている。
 
-1. **Number of exposure**
+1. **Number of exposure**  
 User learning は介入施策への露出と関連しているため、露出の少ない施策の場合観測値 $\tilde{U}_{CTR}$ は真の値の過小評価になっている。
-2. **Treatment inconsistency**
+2. **Treatment inconsistency**  
 cookie ではデバイスを跨いだ識別ができないため、異なるデバイスで non-experiment treatment に接することで user learning effect が dilute されてしまう。
 (ログインに限ることでその効果を弱めることもできるが、いずれにせよ複数の id を持っていたり非ログイン状態で検索を行ったりするケースがあるため厳密ではない)
 
@@ -203,9 +203,11 @@ $$
 
 Sec. 3.2.2 で議論したように、user learning により大きな影響を与えるのは ad quality である。
 それらの関係を数式化すると以下の形で近似できることが確認できた。
+
 $$
 \tilde{U}_{CTR} \simeq k_1 \cdot \Delta {\rm AdRelevance} + k_2 \cdot \Delta {\rm LandingPageQuality}, \quad (k_1, k_2 > 0)
 $$
+
 ここでは、説明性と当てはまりの観点からあえてシンプルな線形モデルを用いている。
 数式を見てわかる通り、**広告の潜在的な click 傾向が広告の関連度だけでなく広告の landing page の質にも大きく依存**しており、これらの要因を考慮することで (UI 変更以外の) 変更をかなりよく近似できることがわかる。
 
